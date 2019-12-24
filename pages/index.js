@@ -1,10 +1,11 @@
-import Navbar from '../components/Navbar';
+//import Navbar from '../components/Navbar';
+import React from 'react';
+import Header from '../components/Header';
 
-const Index = () => (
+const Index = () =>(
     <div>
-        <Navbar/>
-        <h1>Welcome home!</h1>
+        <Header/>
     </div>
-);
+)
 
 export default Index;

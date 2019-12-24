@@ -88,94 +88,369 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Navbar.js":
-/*!******************************!*\
-  !*** ./components/Navbar.js ***!
-  \******************************/
+/***/ "./components/Header/Burger/Burger.styled.js":
+/*!***************************************************!*\
+  !*** ./components/Header/Burger/Burger.styled.js ***!
+  \***************************************************/
+/*! exports provided: StyledBurger */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledBurger", function() { return StyledBurger; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
+  position: absolute;
+  top: 5%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+`;
+
+/***/ }),
+
+/***/ "./components/Header/Burger/index.js":
+/*!*******************************************!*\
+  !*** ./components/Header/Burger/index.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Burger_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Burger.styled */ "./components/Header/Burger/Burger.styled.js");
+var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\components\\Header\\Burger\\index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Burger = () => {
+  return __jsx(_Burger_styled__WEBPACK_IMPORTED_MODULE_1__["StyledBurger"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Burger);
+
+/***/ }),
+
+/***/ "./components/Header/HeaderStyled.styled.js":
+/*!**************************************************!*\
+  !*** ./components/Header/HeaderStyled.styled.js ***!
+  \**************************************************/
+/*! exports provided: StyledHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledHeader", function() { return StyledHeader; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+    padding: 0.5rem;
+    margin: 0;
+    background-color: #622774;
+    color: #39C2D7;
+`;
+
+/***/ }),
+
+/***/ "./components/Header/Menu/MenuStyled.styled.js":
+/*!*****************************************************!*\
+  !*** ./components/Header/Menu/MenuStyled.styled.js ***!
+  \*****************************************************/
+/*! exports provided: StyledMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledMenu", function() { return StyledMenu; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const StyledMenu = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: ${({
+  theme
+}) => theme.primaryLight};
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  
+  @media (max-width: ${({
+  theme
+}) => theme.mobile}) {
+    width: 100%;
+  }
+
+  a {
+    font-size: 1rem;
+    //text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    color: ${({
+  theme
+}) => theme.primaryDark};
+    text-decoration: none;
+    transition: color 0.3s linear;
+    
+    @media (max-width: ${({
+  theme
+}) => theme.mobile}) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    // &:hover {
+    //   color: ${({
+  theme
+}) => theme.primaryHover};
+    // }
+  }
+`;
+
+/***/ }),
+
+/***/ "./components/Header/Menu/index.js":
+/*!*****************************************!*\
+  !*** ./components/Header/Menu/index.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MenuStyled_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MenuStyled.styled */ "./components/Header/Menu/MenuStyled.styled.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Yuliia_Kucher\\react-next\\components\\Navbar.js";
+var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\components\\Header\\Menu\\index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-const Navbar = () => __jsx("div", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("ul", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}, __jsx("li", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx("a", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, "Home"))), __jsx("li", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/login",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, __jsx("a", {
-  className: "jsx-1144250063",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, "Login")))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-  id: "1144250063",
-  __self: undefined
-}, "ul.jsx-1144250063{background:black;color:white;list-style:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}ul.jsx-1144250063 li.jsx-1144250063{font-size:20 px;margin-right:20px;}ul.jsx-1144250063 li.jsx-1144250063 a.jsx-1144250063{color:white;-webkit-text-decoration:none;text-decoration:none;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcWXVsaWlhX0t1Y2hlclxccmVhY3QtbmV4dFxcY29tcG9uZW50c1xcTmF2YmFyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVNvQixBQUcwQixBQU1ELEFBSUosWUFDUyxJQUpILENBTk4sWUFDSSxLQU1oQixXQUxhLGlCQVNiLHlEQVJBIiwiZmlsZSI6IkM6XFxVc2Vyc1xcWXVsaWlhX0t1Y2hlclxccmVhY3QtbmV4dFxcY29tcG9uZW50c1xcTmF2YmFyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xyXG5cclxuY29uc3QgTmF2YmFyID0gKCkgPT4gKFxyXG4gICAgPGRpdj5cclxuICAgICAgICA8dWw+XHJcbiAgICAgICAgICAgIDxsaT48TGluayBocmVmPVwiL1wiPjxhPkhvbWU8L2E+PC9MaW5rPjwvbGk+XHJcbiAgICAgICAgICAgIDxsaT48TGluayBocmVmPVwiL2xvZ2luXCI+PGE+TG9naW48L2E+PC9MaW5rPjwvbGk+XHJcbiAgICAgICAgPC91bD5cclxuXHJcbiAgICAgICAgPHN0eWxlIGpzeD57YFxyXG4gICAgICAgIHVsIHtcclxuICAgICAgICBiYWNrZ3JvdW5kOiBibGFjaztcclxuICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIH1cclxuICAgICAgICB1bCBsaSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAyMCBweDtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDIwcHg7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIHVsIGxpIGEge1xyXG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGB9PC9zdHlsZT5cclxuICAgIDwvZGl2PlxyXG4pO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgTmF2YmFyOyJdfQ== */\n/*@ sourceURL=C:\\\\Users\\\\Yuliia_Kucher\\\\react-next\\\\components\\\\Navbar.js */"));
+const Menu = () => {
+  return __jsx(_MenuStyled_styled__WEBPACK_IMPORTED_MODULE_1__["StyledMenu"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "about us",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "\uD83D\uDC81\uD83C\uDFFB\u200D\u2642\uFE0F"), "Profile"), __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "price",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "\uD83D\uDCB8"), "Dashboard"), __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "contact",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "\uD83D\uDCE9"), "My events"), __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "about us",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "\uD83D\uDC81\uD83C\uDFFB\u200D\u2642\uFE0F"), "Favorite events"), __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "price",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, "\uD83D\uDCB8"), "Settings"), __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, __jsx("span", {
+    role: "img",
+    "aria-label": "contact",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, "\uD83D\uDCE9"), "Sign out"));
+};
 
-/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+/* harmony default export */ __webpack_exports__["default"] = (Menu);
+
+/***/ }),
+
+/***/ "./components/Header/index.js":
+/*!************************************!*\
+  !*** ./components/Header/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Burger */ "./components/Header/Burger/index.js");
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu */ "./components/Header/Menu/index.js");
+/* harmony import */ var _HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HeaderStyled.styled */ "./components/Header/HeaderStyled.styled.js");
+var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\components\\Header\\index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+ //import { ThemeProvider } from 'styled-components';
+//import { GlobalStyles } from './global';
+//import { theme } from './theme';
+
+const Header = () => __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("div", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}), __jsx(_Burger__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, "EVENT MANAGEMENT PLATFORM")));
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
@@ -1925,44 +2200,39 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
-var _jsxFileName = "C:\\Users\\Yuliia_Kucher\\react-next\\pages\\index.js";
-
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./components/Header/index.js");
+var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+//import Navbar from '../components/Navbar';
+
 
 
 const Index = () => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}), __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}, "Welcome home!"));
+}, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}));
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Yuliia_Kucher\react-next\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\OSPanel\domains\react-next\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -2099,14 +2369,14 @@ module.exports = require("react-is");
 
 /***/ }),
 
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("styled-jsx/style");
+module.exports = require("styled-components");
 
 /***/ }),
 
