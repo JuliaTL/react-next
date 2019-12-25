@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: absolute;\n  top: 5%;\n  left: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  width: 2rem;\n  height: 2rem;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  padding: 0;\n  z-index: 10;\n  \n  &:focus {\n    outline: none;\n  }\n  \n  div {\n    width: 2rem;\n    height: 0.25rem;\n    border-radius: 10px;\n    transition: all 0.3s linear;\n    position: relative;\n    transform-origin: 1px;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  \n  top: 5%;\n  left: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  width: 2rem;\n  height: 2rem;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  padding: 0;\n  z-index: 10;\n\n  \n  &:focus {\n    outline: none;\n  }\n  \n  div {\n    width: 2rem;\n    height: 0.25rem;\n    border-radius: 10px;\n    transition: all 0.3s linear;\n    position: relative;\n    transform-origin: 1px;\n    background: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -25,7 +25,10 @@ function _templateObject() {
 }
 
 
-var StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject());
+var StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.primaryLight;
+});
 
 /***/ }),
 
@@ -93,7 +96,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    padding: 0.5rem;\n    margin: 0;\n    background-color: #622774;\n    color: #39C2D7;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    padding: 0.5rem;\n    margin: 0;\n    background-color: #622774;\n    color: #39C72D;\n    display: flex-inline;\n    justify-content: space-between;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -122,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  background: ", ";\n  height: 100vh;\n  text-align: left;\n  padding: 2rem;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: transform 0.3s ease-in-out;\n  \n  @media (max-width: ", ") {\n    width: 100%;\n  }\n\n  a {\n    font-size: 1rem;\n    //text-transform: uppercase;\n    padding: 2rem 0;\n    font-weight: normal;\n    letter-spacing: 0.1rem;\n    color: ", ";\n    text-decoration: none;\n    transition: color 0.3s linear;\n    \n    @media (max-width: ", ") {\n      font-size: 1.5rem;\n      text-align: center;\n    }\n\n    // &:hover {\n    //   color: ", ";\n    // }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  background: ", ";\n  height: 100vh;\n  text-align: left;\n  padding: 2rem;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: transform 0.3s ease-in-out;\n  \n  @media (max-width: ", ") {\n    width: 80%;\n  }\n\n  a {\n    font-size: 1rem;\n    //text-transform: uppercase;\n    padding: 1rem 0;\n    font-weight: normal;\n    //letter-spacing: 0.1rem;\n    color: ", ";\n    text-decoration: none;\n    transition: color 0.3s linear;\n    \n    @media (max-width: ", ") {\n      font-size: 1rem;\n      text-align: center;\n    }\n\n    &:hover {\n      color: ", ";\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -289,29 +292,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Burger */ "./components/Header/Burger/index.js");
 /* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu */ "./components/Header/Menu/index.js");
 /* harmony import */ var _HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HeaderStyled.styled */ "./components/Header/HeaderStyled.styled.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../global */ "./components/global.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./theme */ "./components/Header/theme.js");
 var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\components\\Header\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
- //import { ThemeProvider } from 'styled-components';
-//import { GlobalStyles } from './global';
-//import { theme } from './theme';
+
+
+
+
 
 var Header = function Header() {
-  return __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
+  return __jsx(styled_components__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
+    theme: _theme__WEBPACK_IMPORTED_MODULE_6__["theme"],
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, __jsx("div", {
+  }, __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_global__WEBPACK_IMPORTED_MODULE_5__["GlobalStyles"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -323,16 +331,76 @@ var Header = function Header() {
       lineNumber: 13
     },
     __self: this
-  }), __jsx("p", {
+  }), __jsx(_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, "EVENT MANAGEMENT PLATFORM")));
+  }), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "EVENT MANAGEMENT PLATFORM"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./components/Header/theme.js":
+/*!************************************!*\
+  !*** ./components/Header/theme.js ***!
+  \************************************/
+/*! exports provided: theme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+var theme = {
+  primaryDark: '#FFFFFF',
+  primaryLight: 'linear-gradient(135deg, #622774 0%, #C53364 100%)',
+  primaryHover: '#343078',
+  mobile: '375px'
+};
+
+/***/ }),
+
+/***/ "./components/global.js":
+/*!******************************!*\
+  !*** ./components/global.js ***!
+  \******************************/
+/*! exports provided: GlobalStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyles", function() { return GlobalStyles; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html, body {\n    margin: 0;\n    padding: 0;\n  }\n  *, *::after, *::before {\n    box-sizing: border-box;\n  }\n  body {\n    background: #622774;\n    color: #39C72D;\n    display: flex;\n    font-family: Roboto;\n    height: 100vh;\n    justify-content: center;\n    text-rendering: optimizeLegibility;\n  }\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
 
 /***/ }),
 
@@ -13605,7 +13673,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5COSPanel%5Cdomains%5Creact-next%5Cpages%5Cindex.js ***!
   \*************************************************************************************************************************/
@@ -13628,5 +13696,5 @@ module.exports = dll_7ff8e5d585f359d44ab5;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

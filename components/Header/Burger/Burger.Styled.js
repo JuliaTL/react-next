@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
-  position: absolute;
+  
   top: 5%;
   left: 2rem;
   display: flex;
@@ -14,6 +14,7 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
   
   &:focus {
     outline: none;
@@ -26,5 +27,6 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    background: ${({ theme }) => theme.primaryLight};
   }
 `;

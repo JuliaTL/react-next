@@ -2,18 +2,15 @@ import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Header from './Header';
-import Footer from './Footer';
 
 const Layout = props => (
     <React.Fragment>
         <Head>
             <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-            <title>Conference Management Vinnitsya</title>
-            <link rel="stylesheet" href="/_next/static/style.css" />
+            <title>Event Management Platform</title>
         </Head>
-
+            <Header />
             {props.children}
-            <Footer />
     </React.Fragment>
 );
 
@@ -28,4 +25,4 @@ Layout.defaultProps = {
     children: [],
 };
 
-export default Layout;
+//export default Layout;

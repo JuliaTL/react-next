@@ -14,26 +14,26 @@ export const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+    width: 80%;
   }
 
   a {
     font-size: 1rem;
     //text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-weight: normal;
-    letter-spacing: 0.1rem;
+    //letter-spacing: 0.1rem;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 
-    // &:hover {
-    //   color: ${({ theme }) => theme.primaryHover};
-    // }
+    &:hover {
+      color: ${({ theme }) => theme.primaryHover};
+    }
   }
 `;

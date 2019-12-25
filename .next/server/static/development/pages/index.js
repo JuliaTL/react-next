@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
 const StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
-  position: absolute;
+  
   top: 5%;
   left: 2rem;
   display: flex;
@@ -120,6 +120,7 @@ const StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.bu
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
   
   &:focus {
     outline: none;
@@ -132,6 +133,9 @@ const StyledBurger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.bu
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    background: ${({
+  theme
+}) => theme.primaryLight};
   }
 `;
 
@@ -203,7 +207,9 @@ const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.di
     padding: 0.5rem;
     margin: 0;
     background-color: #622774;
-    color: #39C2D7;
+    color: #39C72D;
+    display: flex-inline;
+    justify-content: space-between;
 `;
 
 /***/ }),
@@ -239,15 +245,15 @@ const StyledMenu = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.nav`
   @media (max-width: ${({
   theme
 }) => theme.mobile}) {
-    width: 100%;
+    width: 80%;
   }
 
   a {
     font-size: 1rem;
     //text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-weight: normal;
-    letter-spacing: 0.1rem;
+    //letter-spacing: 0.1rem;
     color: ${({
   theme
 }) => theme.primaryDark};
@@ -257,15 +263,15 @@ const StyledMenu = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.nav`
     @media (max-width: ${({
   theme
 }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 
-    // &:hover {
-    //   color: ${({
+    &:hover {
+      color: ${({
   theme
 }) => theme.primaryHover};
-    // }
+    }
   }
 `;
 
@@ -409,28 +415,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Burger */ "./components/Header/Burger/index.js");
 /* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu */ "./components/Header/Menu/index.js");
 /* harmony import */ var _HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HeaderStyled.styled */ "./components/Header/HeaderStyled.styled.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../global */ "./components/global.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./theme */ "./components/Header/theme.js");
 var _jsxFileName = "C:\\OSPanel\\domains\\react-next\\components\\Header\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
- //import { ThemeProvider } from 'styled-components';
-//import { GlobalStyles } from './global';
-//import { theme } from './theme';
 
-const Header = () => __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
+
+
+
+
+const Header = () => __jsx(styled_components__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
+  theme: _theme__WEBPACK_IMPORTED_MODULE_6__["theme"],
   __source: {
     fileName: _jsxFileName,
     lineNumber: 10
   },
   __self: undefined
-}, __jsx("div", {
+}, __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 11
   },
   __self: undefined
-}, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}, __jsx(_global__WEBPACK_IMPORTED_MODULE_5__["GlobalStyles"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 12
@@ -442,15 +454,80 @@ const Header = () => __jsx(_HeaderStyled_styled__WEBPACK_IMPORTED_MODULE_3__["St
     lineNumber: 13
   },
   __self: undefined
-}), __jsx("p", {
+}), __jsx(_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 14
   },
   __self: undefined
-}, "EVENT MANAGEMENT PLATFORM")));
+}), __jsx("div", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}, __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16
+  },
+  __self: undefined
+}, "EVENT MANAGEMENT PLATFORM"))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./components/Header/theme.js":
+/*!************************************!*\
+  !*** ./components/Header/theme.js ***!
+  \************************************/
+/*! exports provided: theme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+const theme = {
+  primaryDark: '#FFFFFF',
+  primaryLight: 'linear-gradient(135deg, #622774 0%, #C53364 100%)',
+  primaryHover: '#343078',
+  mobile: '375px'
+};
+
+/***/ }),
+
+/***/ "./components/global.js":
+/*!******************************!*\
+  !*** ./components/global.js ***!
+  \******************************/
+/*! exports provided: GlobalStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyles", function() { return GlobalStyles; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const GlobalStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"]`
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  body {
+    background: #622774;
+    color: #39C72D;
+    display: flex;
+    font-family: Roboto;
+    height: 100vh;
+    justify-content: center;
+    text-rendering: optimizeLegibility;
+  }
+  `;
 
 /***/ }),
 
@@ -2225,7 +2302,7 @@ const Index = () => __jsx("div", {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
